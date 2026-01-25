@@ -3,16 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const welcome = {
+  greeting: 'Hello',
+  title: 'General Kenobi',
+};
 
+function App() {
   return (
-    <>
-      <div>
-       Hello from my mac
+    <div>
+      <h1>{welcome.greeting},{welcome.title}</h1>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type = "text" />    
       </div>
-     
-    </>
   )
 }
 

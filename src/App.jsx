@@ -28,8 +28,8 @@ const list = [
   
 ];
 
-function App() {
-  return (
+const App = () => 
+   (
       <div>
         
         <h2>{welcome.greeting},{welcome.title}</h2>
@@ -37,30 +37,27 @@ function App() {
         <Search />
       </div>
   );
-}
 
-function List(){
- return (
+
+const List =()=> (
   <ul>
-        {list.map(function (item){
-          return <li key = {item.objectID}>
+        {list.map((item)=>(
+          <li key = {item.objectID}>
             <span><a href={item.url}>{item.title}</a></span>
             <span> by {item.author}. </span>
             <span>{item.num_comments} comments. </span>
             <span>{item.points} points. </span>
-          </li>;
-        })}
+          </li>
+        ))}
         </ul>
  )
-}
 
-function Search(){
-return(
+
+const Search=()=>(
   <div>
       <label htmlFor="search">Search:</label>
       <input id="search" type="text" />
   </div>
-
 )
-}
+
 export default App
